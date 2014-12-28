@@ -14,11 +14,16 @@ In order to run it locally you'll need to fetch some dependencies using [npm](ht
     $ [sudo] npm install -g bower
     ```
 
-* Install [Less](http://lesscss.org//):
+* Install [Less](http://lesscss.org/):
 
     ```sh
     $ [sudo] npm install -g less
     ```
+* Install [Less autoprefixer plugin](https://github.com/less/less-plugin-autoprefix):
+
+    ```sh
+    $ [sudo] npm install -g less-plugin-autoprefix
+    ```    
 
 * Install local dependencies:
 
@@ -29,7 +34,7 @@ In order to run it locally you'll need to fetch some dependencies using [npm](ht
 * Invoke the compiler to output the CSS file:
 
     ```sh
-    $ lessc src/my-element.less > src/my-element.css
+    $ lessc --autoprefix src/my-element.less > src/my-element.css
     ```
 
 ## Contributing
