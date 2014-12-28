@@ -1,0 +1,58 @@
+:host * {
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:host #slider {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+:host #overflow {
+  width: 100%;
+  overflow: hidden;
+}
+:host #slides .inner {
+  width: 400%;
+}
+:host #slides .inner {
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+  transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+:host #slides img {
+  width: 25%;
+  float: left;
+}
+:host #slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+:host #slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+:host #slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+:host #slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+:host input[type="radio"] {
+  display: none;
+}
+:host label {
+  background: #CCC;
+  display: inline-block;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+:host #slide1:checked ~ label[for="slide1"],
+:host #slide2:checked ~ label[for="slide2"],
+:host #slide3:checked ~ label[for="slide3"],
+:host #slide4:checked ~ label[for="slide4"] {
+  background: #333;
+}
